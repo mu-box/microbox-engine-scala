@@ -67,25 +67,25 @@ setup_java_env() {
 
 # Here we get to be a bit clever. sbt will store it's cache (deps, etc)
 # in the HOME dir. Changing this is not easily configurable, so we'll
-# essentially setup a cache dir in ~/.nanobox/sbt_cache, and symlink
+# essentially setup a cache dir in ~/.microbox/sbt_cache, and symlink
 # the ~/.{ivy2,sbt} to the cached location. Also, we'll copy anything
 # into the cache on the first run.
 setup_scala_env() {
-  
+
   # Ensure the cache destination exists for sbt & ivy2
-  if [[ ! -d "$(nos_code_dir)/.nanobox/sbt_cache/sbt" ]]; then
-    mkdir -p "$(nos_code_dir)/.nanobox/sbt_cache/sbt"
+  if [[ ! -d "$(nos_code_dir)/.microbox/sbt_cache/sbt" ]]; then
+    mkdir -p "$(nos_code_dir)/.microbox/sbt_cache/sbt"
   fi
-  if [[ ! -d "$(nos_code_dir)/.nanobox/sbt_cache/ivy2" ]]; then
-    mkdir -p "$(nos_code_dir)/.nanobox/sbt_cache/ivy2"
+  if [[ ! -d "$(nos_code_dir)/.microbox/sbt_cache/ivy2" ]]; then
+    mkdir -p "$(nos_code_dir)/.microbox/sbt_cache/ivy2"
   fi
-  
+
   # If anything exists before we symlink, copy it into the cache
   if [[ -d ~/.sbt ]]; then
-    mv ~/.sbt/* "$(nos_code_dir)/.nanobox/sbt_cache/sbt"
+    mv ~/.sbt/* "$(nos_code_dir)/.microbox/sbt_cache/sbt"
   fi
   if [[ -d ~/.ivy2 ]]; then
-    mv ~/.ivy2/* "$(nos_code_dir)/.nanobox/sbt_cache/ivy2"
+    mv ~/.ivy2/* "$(nos_code_dir)/.microbox/sbt_cache/ivy2"
   fi
 }
 

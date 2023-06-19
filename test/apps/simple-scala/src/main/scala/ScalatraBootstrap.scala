@@ -1,4 +1,4 @@
-import io.nanobox.samplescala._
+import cloud.microbox.samplescala._
 import org.scalatra._
 import javax.servlet.ServletContext
 

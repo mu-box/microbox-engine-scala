@@ -8,7 +8,7 @@ import ScalateKeys._
 import com.typesafe.sbt.packager.archetypes.JavaAppPackaging
 
 object SamplescalaBuild extends Build {
-  val Organization = "io.nanobox"
+  val Organization = "cloud.microbox"
   val Name = "samplescala"
   val Version = "0.1.0-SNAPSHOT"
   val ScalaVersion = "2.11.8"

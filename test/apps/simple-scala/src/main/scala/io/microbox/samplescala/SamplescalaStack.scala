@@ -1,4 +1,4 @@
-package io.nanobox.samplescala
+package cloud.microbox.samplescala
 
 import org.scalatra._
 import scalate.ScalateSupport

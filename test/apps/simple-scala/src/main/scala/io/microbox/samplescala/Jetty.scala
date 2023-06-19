@@ -1,4 +1,4 @@
-package io.nanobox.samplescala
+package cloud.microbox.samplescala
 import org.eclipse.jetty.server.Server
 import org.eclipse.jetty.servlet.{DefaultServlet, ServletContextHandler}
 import org.eclipse.jetty.webapp.WebAppContext
